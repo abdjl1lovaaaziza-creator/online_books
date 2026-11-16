@@ -1,0 +1,91 @@
+{
+  "app_name": "Universal Raqamli Kutubxona",
+  "welcome": "👋 *Universal Raqamli Kutubxonaga xush kelibsiz, {name}!* 📚\n\nDunyo bo'ylab millionlab bepul, qonuniy va ochiq kitoblar, darsliklar hamda ilmiy manbalarni qidiring va yuklab oling.\n\n🔍 *Nomi, muallifi, ISBN yoki mavzusi* bo'yicha qidiring.\n🎓 Maktab va universitet darsliklariga ega bo'ling.\n📥 *PDF, EPUB, FB2, TXT, MOBI* formatlarida yuklab oling yoki onlayn o'qing.",
+  "select_language": "🌍 Iltimos, o'zingizga qulay tilni tanlang:",
+  "language_changed": "✅ Til muvaffaqiyatli o'zgartirildi: *{lang_name}*",
+  "menu": {
+    "search": "🔍 Kitob qidirish",
+    "categories": "📚 Bo'limlar",
+    "textbooks": "🎓 Darsliklar",
+    "languages": "🌍 Tillar",
+    "popular": "🔥 Ommabop kitoblar",
+    "recent": "🆕 Yangi qo'shilganlar",
+    "favorites": "⭐ Tanlanganlar",
+    "downloads": "📖 Yuklanmalarim",
+    "settings": "⚙️ Sozlamalar",
+    "about": "ℹ️ Bot haqida",
+    "admin": "⚡ Boshqaruv paneli"
+  },
+  "search": {
+    "prompt": "🔍 *Kitob qidiruvi*\n\nKitob nomi, muallifi, ISBN yoki kalit so'zni yuboring:\n_Masalan: Alpomish, Navoiy, Fizika, Dasturlash_",
+    "searching": "🔎 Kutubxonalardan qidirilmoqda: *{query}*...",
+    "no_results": "❌ *\"{query}\"* bo'yicha kitob topilmadi. Kalit so'zlarni o'zgartirib ko'ring.",
+    "results_header": "📚 *\"{query}\" bo'yicha natijalar* ({page}/{total_pages}-sahifa):\nTopildi: {count} ta kitob:",
+    "filter_prompt": "⚙️ *Qidiruv filtrlari:*",
+    "filter_format": "📑 Format: {format}",
+    "filter_lang": "🌐 Til: {lang}",
+    "clear_filters": "🔄 Filtrlarni tozalash",
+    "next": "Keyingi ➡️",
+    "prev": "⬅️ Oldingi",
+    "page_info": "{page}-sahifa / {total_pages}"
+  },
+  "book": {
+    "details": "📖 *{title}*\n\n✍️ *Muallif:* {authors}\n📅 *Yil:* {year}\n🌐 *Til:* {language}\n🏢 *Nashriyot:* {publisher}\n🔢 *ISBN:* {isbn}\n📑 *Formatlar:* {formats}\n⚖️ *Litsenziya:* {license}\n🏛️ *Manba:* {source}\n\n📝 *Tavsif:*\n{description}",
+    "no_description": "Ushbu kitob uchun tavsif kiritilmagan.",
+    "unknown": "Noma'lum",
+    "download_btn": "📥 Yuklab olish {format} ({size})",
+    "download_btn_no_size": "📥 Yuklab olish {format}",
+    "access_btn": "🌐 Onlayn o'qish",
+    "add_fav": "⭐ Tanlanganlarga qo'shish",
+    "remove_fav": "❌ Tanlanganlardan o'chirish",
+    "fav_added": "⭐ *\"{title}\"* tanlanganlarga qo'shildi!",
+    "fav_removed": "🗑️ *\"{title}\"* tanlanganlardan olib tashlandi.",
+    "back_to_results": "⬅️ Natijalarga qaytish",
+    "back_to_menu": "🏠 Asosiy menyu"
+  },
+  "download": {
+    "preparing": "⏳ *\"{title}\"* ({format}) fayli tayyorlanmoqda...",
+    "downloading": "📥 Telegram orqali yuborilmoqda...",
+    "success": "✅ Fayl muvaffaqiyatli yuborildi! Maroqli mutolaa tilaymiz: *\"{title}\"*.",
+    "too_large": "⚠️ *Fayl hajmi juda katta* ({size}).\nTelegram orqali 50 MB dan katta fayllarni jo'natib bo'lmaydi.\n\n🔗 *Rasmiy to'g'ridan-to'g'ri yuklab olish havolasi:*\n{link}",
+    "failed": "❌ Faylni Telegram orqali yuborib bo'lmadi. Rasmiy manzil orqali oching:\n{link}"
+  },
+  "categories": {
+    "title": "📚 *Kitob bo'limlari*\nO'zingizga qiziq sohani tanlang:",
+    "textbooks_title": "🎓 *Ta'lim darsliklari*\nKerakli fanni tanlang:",
+    "category_books": "📚 *Bo'lim: {category}* ({page}/{total_pages}-sahifa):"
+  },
+  "favorites": {
+    "empty": "⭐ Tanlangan kitoblaringiz ro'yxati bo'sh.\nIxtiyoriy kitob sahifasidagi *⭐ Tanlanganlarga qo'shish* tugmasini bosing!",
+    "header": "⭐ *Sizning tanlangan kitoblaringiz* (Jami: {total} - {page}/{total_pages}-sahifa):"
+  },
+  "downloads_history": {
+    "empty": "📖 Siz hali kitob yuklab olmadingiz.",
+    "header": "📖 *Yuklangan kitoblar tarixi* (Jami: {total} - {page}/{total_pages}-sahifa):"
+  },
+  "settings": {
+    "title": "⚙️ *Foydalanuvchi profili*\n\n👤 *ID:* `{user_id}`\n🌐 *Til:* {language}\n📅 *Ro'yxatdan o'tilgan:* {registered_date}\n⭐ *Tanlanganlar:* {favorites_count}\n📥 *Yuklanmalar:* {downloads_count}",
+    "change_lang": "🌍 Tilni almashtirish",
+    "stats": "📊 Shaxsiy statistika"
+  },
+  "about": {
+    "text": "📖 *Universal Raqamli Kutubxona*\n\nJahonning ochiq va qonuniy manbalaridagi adabiyotlarni birlashtiruvchi zamonaviy elektron kutubxona.\n\n🌐 *Ulanuvchi manbalar:*\n• Open Library\n• Project Gutenberg\n• Google Books (Ochiq manbalar)\n• Internet Archive\n\n⚖️ *Mualliflik huquqi:*\nBarcha materiallar ochiq litsenziyalar asosida taqdim etiladi."
+  },
+  "admin": {
+    "title": "⚡ *Boshqaruv paneli*",
+    "stats": "📊 *Tizim holati*\n• Foydalanuvchilar: `{total_users}`\n• Faol (7 kun): `{active_users}`\n• Indekslangan kitoblar: `{total_books}`\n• Jami yuklab olishlar: `{total_downloads}`\n• Ma'lumotlar bazasi: `PostgreSQL faol`\n• Redis kesh: `{redis_status}`",
+    "broadcast_prompt": "📢 Barcha foydalanuvchilarga yuboriladigan e'lon matnini kiriting:",
+    "broadcast_started": "📢 {total} ta foydalanuvchiga xabar jo'natilmoqda...",
+    "broadcast_done": "✅ Xabar yuborildi!\nYetkazildi: {sent} | Xatolar: {failed}",
+    "add_book": "➕ Yangi kitob qo'shish",
+    "manage_categories": "🗂️ Bo'limlarni boshqarish",
+    "btn_stats": "📊 Yangilash",
+    "btn_broadcast": "📢 Xabar yuborish"
+  },
+  "errors": {
+    "general": "⚠️ Kutilmagan xatolik yuz berdi. Iltimos, keyinroq qayta urinib ko'ring.",
+    "throttled": "⏳ Iltimos, biroz kuting. So'rovlar juda ko'p yuborilmoqda.",
+    "blocked": "⛔ Sizning hisobingiz ma'muriyat tomonidan bloklangan.",
+    "unauthorized": "⛔ Sizda ushbu amalni bajarish huquqi yo'q."
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "app_name": "Universelle Digitale Bibliothek",
+  "welcome": "👋 *Willkommen in der Universellen Digitalen Bibliothek, {name}!* 📚\n\nSuchen und laden Sie Millionen kostenloser, legaler und frei zugänglicher Bücher, Lehrbücher und wissenschaftlicher Publikationen weltweit herunter.\n\n🔍 Suche nach *Titel, Autor, ISBN oder Fachgebiet*.\n🎓 Zugang zu Schul- und Hochschullehrbüchern.\n📥 Download in *PDF, EPUB, FB2, TXT, MOBI* oder online lesen.",
+  "select_language": "🌍 Bitte wählen Sie Ihre bevorzugte Sprache:",
+  "language_changed": "✅ Sprache erfolgreich geändert auf: *{lang_name}*",
+  "menu": {
+    "search": "🔍 Bücher suchen",
+    "categories": "📚 Kategorien",
+    "textbooks": "🎓 Lehrbücher",
+    "languages": "🌍 Sprachen",
+    "popular": "🔥 Beliebte Bücher",
+    "recent": "🆕 Kürzlich hinzugefügt",
+    "favorites": "⭐ Favoriten",
+    "downloads": "📖 Meine Downloads",
+    "settings": "⚙️ Einstellungen",
+    "about": "ℹ️ Über uns",
+    "admin": "⚡ Administrator"
+  },
+  "search": {
+    "prompt": "🔍 *Büchersuche*\n\nGeben Sie Buchtitel, Autor, ISBN oder Thema ein:\n_Beispiel: Faust, Goethe, 9783150000014, Quantenphysik_",
+    "searching": "🔎 Suche in Bibliotheken nach: *{query}*...",
+    "no_results": "❌ Keine Bücher gefunden für *\"{query}\"*. Bitte versuchen Sie andere Suchbegriffe.",
+    "results_header": "📚 *Suchergebnisse für \"{query}\"* (Seite {page}/{total_pages}):\n{count} Bücher gefunden:",
+    "filter_prompt": "⚙️ *Suchfilter:*",
+    "filter_format": "📑 Format: {format}",
+    "filter_lang": "🌐 Sprache: {lang}",
+    "clear_filters": "🔄 Filter zurücksetzen",
+    "next": "Weiter ➡️",
+    "prev": "⬅️ Zurück",
+    "page_info": "Seite {page} von {total_pages}"
+  },
+  "book": {
+    "details": "📖 *{title}*\n\n✍️ *Autor:* {authors}\n📅 *Jahr:* {year}\n🌐 *Sprache:* {language}\n🏢 *Verlag:* {publisher}\n🔢 *ISBN:* {isbn}\n📑 *Formate:* {formats}\n⚖️ *Lizenz:* {license}\n🏛️ *Quelle:* {source}\n\n📝 *Beschreibung:*\n{description}",
+    "no_description": "Keine Beschreibung verfügbar.",
+    "unknown": "Unbekannt",
+    "download_btn": "📥 Download {format} ({size})",
+    "download_btn_no_size": "📥 Download {format}",
+    "access_btn": "🌐 Online lesen",
+    "add_fav": "⭐ Zu Favoriten",
+    "remove_fav": "❌ Aus Favoriten entfernen",
+    "fav_added": "⭐ *\"{title}\"* zu Ihren Favoriten hinzugefügt!",
+    "fav_removed": "🗑️ *\"{title}\"* aus Favoriten entfernt.",
+    "back_to_results": "⬅️ Zurück zur Suche",
+    "back_to_menu": "🏠 Hauptmenü"
+  },
+  "download": {
+    "preparing": "⏳ Datei für *\"{title}\"* ({format}) wird vorbereitet...",
+    "downloading": "📥 Übertrage Datei zu Telegram...",
+    "success": "✅ Datei erfolgreich gesendet! Viel Spaß beim Lesen von *\"{title}\"*.",
+    "too_large": "⚠️ *Datei ist zu groß für Telegram* ({size}).\nTelegram erlaubt Bot-Uploads bis maximal 50 MB.\n\n🔗 *Offizieller Download-Link:*\n{link}",
+    "failed": "❌ Download über Telegram fehlgeschlagen. Bitte nutzen Sie die offizielle Website:\n{link}"
+  },
+  "categories": {
+    "title": "📚 *Buchkategorien*\nWählen Sie ein Themengebiet:",
+    "textbooks_title": "🎓 *Lehrbücher und Studienmaterialien*\nWählen Sie einen Fachbereich:",
+    "category_books": "📚 *Kategorie: {category}* (Seite {page}/{total_pages}):"
+  },
+  "favorites": {
+    "empty": "⭐ Ihre Favoritenliste ist derzeit leer.\nTippen Sie bei jedem Buch auf *⭐ Zu Favoriten*, um es hier zu speichern!",
+    "header": "⭐ *Ihre Favoriten* (Gesamt: {total} - Seite {page}/{total_pages}):"
+  },
+  "downloads_history": {
+    "empty": "📖 Sie haben noch keine Bücher heruntergeladen.",
+    "header": "📖 *Download-Verlauf* (Gesamt: {total} - Seite {page}/{total_pages}):"
+  },
+  "settings": {
+    "title": "⚙️ *Benutzereinstellungen*\n\n👤 *ID:* `{user_id}`\n🌐 *Sprache:* {language}\n📅 *Registriert:* {registered_date}\n⭐ *Favoriten:* {favorites_count}\n📥 *Downloads:* {downloads_count}",
+    "change_lang": "🌍 Sprache ändern",
+    "stats": "📊 Meine Statistiken"
+  },
+  "about": {
+    "text": "📖 *Universelle Digitale Bibliothek*\n\nEine moderne digitale Bibliothek mit freiem Zugang zu gemeinfreien Werken und offenen Bildungsressourcen.\n\n🌐 *Quellen:*\n• Open Library\n• Project Gutenberg\n• Google Books\n• Internet Archive"
+  },
+  "admin": {
+    "title": "⚡ *Administrationsbereich*",
+    "stats": "📊 *Systemstatus*\n• Benutzer gesamt: `{total_users}`\n• Aktive Benutzer (7 Tage): `{active_users}`\n• Indexierte Bücher: `{total_books}`\n• Downloads gesamt: `{total_downloads}`\n• Datenbank: `PostgreSQL Verbunden`\n• Redis Cache: `{redis_status}`",
+    "broadcast_prompt": "📢 Bitte geben Sie den Text für die Rundnachricht ein:",
+    "broadcast_started": "📢 Sende Rundnachricht an {total} Benutzer...",
+    "broadcast_done": "✅ Rundnachricht beendet!\nZugestellt: {sent} | Fehlgeschlagen: {failed}",
+    "add_book": "➕ Buch manuell hinzufügen",
+    "manage_categories": "🗂️ Kategorien verwalten",
+    "btn_stats": "📊 Aktualisieren",
+    "btn_broadcast": "📢 Nachricht senden"
+  },
+  "errors": {
+    "general": "⚠️ Ein unerwarteter Fehler ist aufgetreten. Bitte versuchen Sie es später erneut.",
+    "throttled": "⏳ Zu viele Anfragen. Bitte warten Sie einen Moment.",
+    "blocked": "⛔ Ihr Konto wurde gesperrt.",
+    "unauthorized": "⛔ Keine Berechtigung für diese Aktion."
+  }
+}

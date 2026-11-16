@@ -1,0 +1,91 @@
+{
+  "app_name": "Biblioteca Digital Universal",
+  "welcome": "👋 *¡Bienvenido a la Biblioteca Digital Universal, {name}!* 📚\n\nBusca y descarga millones de libros, manuales de texto y recursos académicos legales y de acceso libre de todo el mundo.\n\n🔍 Busca por *título, autor, ISBN o materia*.\n🎓 Accede a libros de texto escolares y universitarios.\n📥 Descarga en *PDF, EPUB, FB2, TXT, MOBI* o lee en línea.",
+  "select_language": "🌍 Por favor, selecciona tu idioma preferido:",
+  "language_changed": "✅ Idioma actualizado con éxito a: *{lang_name}*",
+  "menu": {
+    "search": "🔍 Buscar libros",
+    "categories": "📚 Categorías",
+    "textbooks": "🎓 Libros de texto",
+    "languages": "🌍 Idiomas",
+    "popular": "🔥 Libros populares",
+    "recent": "🆕 Recién añadidos",
+    "favorites": "⭐ Favoritos",
+    "downloads": "📖 Mis descargas",
+    "settings": "⚙️ Ajustes",
+    "about": "ℹ️ Acerca de",
+    "admin": "⚡ Panel de control"
+  },
+  "search": {
+    "prompt": "🔍 *Búsqueda de libros*\n\nIntroduce el título del libro, autor, ISBN o tema:\n_Ejemplo: Don Quijote, Cervantes, 9788467016901, Astrofísica_",
+    "searching": "🔎 Buscando en bibliotecas: *{query}*...",
+    "no_results": "❌ No se encontraron libros para *\"{query}\"*. Por favor, prueba con otras palabras clave.",
+    "results_header": "📚 *Resultados de búsqueda para \"{query}\"* (Página {page}/{total_pages}):\nSe encontraron {count} libros:",
+    "filter_prompt": "⚙️ *Filtros de búsqueda:*",
+    "filter_format": "📑 Formato: {format}",
+    "filter_lang": "🌐 Idioma: {lang}",
+    "clear_filters": "🔄 Restablecer filtros",
+    "next": "Siguiente ➡️",
+    "prev": "⬅️ Anterior",
+    "page_info": "Página {page} de {total_pages}"
+  },
+  "book": {
+    "details": "📖 *{title}*\n\n✍️ *Autor:* {authors}\n📅 *Año:* {year}\n🌐 *Idioma:* {language}\n🏢 *Editorial:* {publisher}\n🔢 *ISBN:* {isbn}\n📑 *Formatos:* {formats}\n⚖️ *Licencia:* {license}\n🏛️ *Fuente:* {source}\n\n📝 *Descripción:*\n{description}",
+    "no_description": "No hay descripción disponible para este libro.",
+    "unknown": "Desconocido",
+    "download_btn": "📥 Descargar {format} ({size})",
+    "download_btn_no_size": "📥 Descargar {format}",
+    "access_btn": "🌐 Leer en línea",
+    "add_fav": "⭐ Añadir a favoritos",
+    "remove_fav": "❌ Quitar de favoritos",
+    "fav_added": "⭐ *\"{title}\"* ha sido añadido a tus favoritos.",
+    "fav_removed": "🗑️ *\"{title}\"* eliminado de tus favoritos.",
+    "back_to_results": "⬅️ Volver a resultados",
+    "back_to_menu": "🏠 Menú principal"
+  },
+  "download": {
+    "preparing": "⏳ Preparando entrega de archivo para *\"{title}\"* ({format})...",
+    "downloading": "📥 Transfiriendo archivo hacia Telegram...",
+    "success": "✅ ¡Archivo entregado con éxito! Disfruta la lectura de *\"{title}\"*.",
+    "too_large": "⚠️ *El archivo supera el límite de Telegram* ({size}).\nLos bots de Telegram tienen un límite de 50 MB.\n\n🔗 *Enlace oficial de lectura / descarga directa:*\n{link}",
+    "failed": "❌ La descarga no se pudo completar a través de Telegram. Utiliza el enlace oficial:\n{link}"
+  },
+  "categories": {
+    "title": "📚 *Categorías de libros*\nSelecciona una materia para explorar:",
+    "textbooks_title": "🎓 *Libros de texto y material de estudio*\nSelecciona un área formativa:",
+    "category_books": "📚 *Categoría: {category}* (Página {page}/{total_pages}):"
+  },
+  "favorites": {
+    "empty": "⭐ Tu lista de favoritos está vacía.\n¡Pulsa en *⭐ Añadir a favoritos* en la ficha de cualquier libro para guardarlo aquí!",
+    "header": "⭐ *Tus libros favoritos* (Total: {total} - Página {page}/{total_pages}):"
+  },
+  "downloads_history": {
+    "empty": "📖 Aún no has descargado ningún libro.",
+    "header": "📖 *Historial de descargas* (Total: {total} - Página {page}/{total_pages}):"
+  },
+  "settings": {
+    "title": "⚙️ *Perfil de usuario y ajustes*\n\n👤 *ID de usuario:* `{user_id}`\n🌐 *Idioma:* {language}\n📅 *Fecha de registro:* {registered_date}\n⭐ *Favoritos:* {favorites_count}\n📥 *Descargas:* {downloads_count}",
+    "change_lang": "🌍 Cambiar idioma",
+    "stats": "📊 Mis estadísticas"
+  },
+  "about": {
+    "text": "📖 *Biblioteca Digital Universal*\n\nUna biblioteca digital moderna que ofrece acceso libre a las obras maestras del dominio público y recursos educativos abiertos.\n\n🌐 *Fuentes integradas:*\n• Open Library\n• Project Gutenberg\n• Google Books\n• Internet Archive"
+  },
+  "admin": {
+    "title": "⚡ *Panel de administración*",
+    "stats": "📊 *Estado del sistema*\n• Usuarios totales: `{total_users}`\n• Activos (7 días): `{active_users}`\n• Libros indexados: `{total_books}`\n• Descargas totales: `{total_downloads}`\n• Base de datos: `PostgreSQL Conectada`\n• Caché Redis: `{redis_status}`",
+    "broadcast_prompt": "📢 Escribe el mensaje que deseas enviar a todos los usuarios:",
+    "broadcast_started": "📢 Difundiendo mensaje a {total} usuarios...",
+    "broadcast_done": "✅ Difusión completada.\nEntregados: {sent} | Fallidos: {failed}",
+    "add_book": "➕ Añadir libro manual",
+    "manage_categories": "🗂️ Gestionar categorías",
+    "btn_stats": "📊 Actualizar estadísticas",
+    "btn_broadcast": "📢 Mensaje global"
+  },
+  "errors": {
+    "general": "⚠️ Ocurrió un error inesperado. Por favor, inténtalo más tarde.",
+    "throttled": "⏳ Demasiadas solicitudes. Por favor, espera unos segundos.",
+    "blocked": "⛔ Tu cuenta ha sido bloqueada por un administrador.",
+    "unauthorized": "⛔ No tienes permiso para realizar esta acción."
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "app_name": "Bibliothèque Numérique Universelle",
+  "welcome": "👋 *Bienvenue dans la Bibliothèque Numérique Universelle, {name} !* 📚\n\nRecherchez et téléchargez des millions de livres, manuels scolaires et documents académiques légaux et libres d'accès du monde entier.\n\n🔍 Recherche par *titre, auteur, ISBN ou sujet*.\n🎓 Accès aux manuels scolaires et universitaires.\n📥 Téléchargement en *PDF, EPUB, FB2, TXT, MOBI* ou lecture en ligne.",
+  "select_language": "🌍 Veuillez sélectionner votre langue préférée :",
+  "language_changed": "✅ Langue mise à jour avec succès : *{lang_name}*",
+  "menu": {
+    "search": "🔍 Rechercher des livres",
+    "categories": "📚 Catégories",
+    "textbooks": "🎓 Manuels scolaires",
+    "languages": "🌍 Langues",
+    "popular": "🔥 Livres populaires",
+    "recent": "🆕 Ajouts récents",
+    "favorites": "⭐ Favoris",
+    "downloads": "📖 Mes téléchargements",
+    "settings": "⚙️ Paramètres",
+    "about": "ℹ️ À propos",
+    "admin": "⚡ Administration"
+  },
+  "search": {
+    "prompt": "🔍 *Recherche de livres*\n\nEntrez un titre de livre, auteur, ISBN ou sujet :\n_Exemple : Les Misérables, Victor Hugo, 9782070409228, Philosophie_",
+    "searching": "🔎 Recherche dans les bibliothèques pour : *{query}*...",
+    "no_results": "❌ Aucun livre trouvé pour *\"{query}\"*. Veuillez essayer d'autres mots-clés.",
+    "results_header": "📚 *Résultats de recherche pour \"{query}\"* (Page {page}/{total_pages}) :\n{count} livres trouvés :",
+    "filter_prompt": "⚙️ *Filtres de recherche :*",
+    "filter_format": "📑 Format : {format}",
+    "filter_lang": "🌐 Langue : {lang}",
+    "clear_filters": "🔄 Réinitialiser les filtres",
+    "next": "Suivant ➡️",
+    "prev": "⬅️ Précédent",
+    "page_info": "Page {page} sur {total_pages}"
+  },
+  "book": {
+    "details": "📖 *{title}*\n\n✍️ *Auteur :* {authors}\n📅 *Année :* {year}\n🌐 *Langue :* {language}\n🏢 *Éditeur :* {publisher}\n🔢 *ISBN :* {isbn}\n📑 *Formats :* {formats}\n⚖️ *Licence :* {license}\n🏛️ *Source :* {source}\n\n📝 *Description :*\n{description}",
+    "no_description": "Aucune description disponible pour ce livre.",
+    "unknown": "Inconnu",
+    "download_btn": "📥 Télécharger {format} ({size})",
+    "download_btn_no_size": "📥 Télécharger {format}",
+    "access_btn": "🌐 Lire en ligne",
+    "add_fav": "⭐ Ajouter aux favoris",
+    "remove_fav": "❌ Retirer des favoris",
+    "fav_added": "⭐ *\"{title}\"* a été ajouté à vos favoris !",
+    "fav_removed": "🗑️ *\"{title}\"* retiré des favoris.",
+    "back_to_results": "⬅️ Retour aux résultats",
+    "back_to_menu": "🏠 Menu principal"
+  },
+  "download": {
+    "preparing": "⏳ Préparation du fichier pour *\"{title}\"* ({format})...",
+    "downloading": "📥 Transmission du fichier vers Telegram...",
+    "success": "✅ Fichier transmis avec succès ! Bonne lecture de *\"{title}\"*.",
+    "too_large": "⚠️ *Le fichier dépasse la limite de Telegram* ({size}).\nLes bots Telegram sont limités à 50 Mo.\n\n🔗 *Lien officiel de lecture / téléchargement direct :*\n{link}",
+    "failed": "❌ Le téléchargement a échoué via Telegram. Veuillez utiliser le lien officiel :\n{link}"
+  },
+  "categories": {
+    "title": "📚 *Catégories de livres*\nChoisissez une discipline :",
+    "textbooks_title": "🎓 *Manuels scolaires et universitaires*\nSélectionnez un domaine d'étude :",
+    "category_books": "📚 *Catégorie : {category}* (Page {page}/{total_pages}) :"
+  },
+  "favorites": {
+    "empty": "⭐ Votre liste de favoris est vide.\nAppuyez sur *⭐ Ajouter aux favoris* sur la fiche d'un livre pour l'enregistrer ici !",
+    "header": "⭐ *Vos livres favoris* (Total : {total} - Page {page}/{total_pages}) :"
+  },
+  "downloads_history": {
+    "empty": "📖 Vous n'avez pas encore téléchargé de livres.",
+    "header": "📖 *Historique des téléchargements* (Total : {total} - Page {page}/{total_pages}) :"
+  },
+  "settings": {
+    "title": "⚙️ *Profil et paramètres*\n\n👤 *ID :* `{user_id}`\n🌐 *Langue :* {language}\n📅 *Inscrit le :* {registered_date}\n⭐ *Favoris :* {favorites_count}\n📥 *Téléchargements :* {downloads_count}",
+    "change_lang": "🌍 Changer de langue",
+    "stats": "📊 Mes statistiques"
+  },
+  "about": {
+    "text": "📖 *Bibliothèque Numérique Universelle*\n\nUne bibliothèque moderne donnant libre accès aux chefs-d'œuvre du domaine public et aux ressources éducatives ouvertes.\n\n🌐 *Sources intégrées :*\n• Open Library\n• Project Gutenberg\n• Google Books\n• Internet Archive"
+  },
+  "admin": {
+    "title": "⚡ *Panneau d'administration*",
+    "stats": "📊 *Statistiques du système*\n• Utilisateurs : `{total_users}`\n• Actifs (7 jours) : `{active_users}`\n• Livres indexés : `{total_books}`\n• Téléchargements : `{total_downloads}`\n• Base de données : `PostgreSQL connectée`\n• Cache Redis : `{redis_status}`",
+    "broadcast_prompt": "📢 Saisissez le message à diffuser à tous les utilisateurs :",
+    "broadcast_started": "📢 Envoi de l'annonce à {total} utilisateurs...",
+    "broadcast_done": "✅ Diffusion terminée !\nReçus : {sent} | Échecs : {failed}",
+    "add_book": "➕ Ajouter un livre",
+    "manage_categories": "🗂️ Gérer les catégories",
+    "btn_stats": "📊 Actualiser",
+    "btn_broadcast": "📢 Diffuser un message"
+  },
+  "errors": {
+    "general": "⚠️ Une erreur est survenue. Veuillez réessayer ultérieurement.",
+    "throttled": "⏳ Requêtes trop fréquentes. Merci de patienter un instant.",
+    "blocked": "⛔ Votre compte a été suspendu par un administrateur.",
+    "unauthorized": "⛔ Vous n'êtes pas autorisé à effectuer cette action."
+  }
+}

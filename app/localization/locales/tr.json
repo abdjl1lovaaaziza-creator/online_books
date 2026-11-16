@@ -1,0 +1,91 @@
+{
+  "app_name": "Evrensel Dijital Kütüphane",
+  "welcome": "👋 *Evrensel Dijital Kütüphaneye Hoş Geldiniz, {name}!* 📚\n\nDünya genelindeki milyonlarca ücretsiz, yasal ve açık erişimli kitap, ders kitabı ve akademik yayına erişin.\n\n🔍 *Başlık, yazar, ISBN veya konu* ile arayın.\n🎓 Üniversite ve lise ders kitaplarına erişin.\n📥 *PDF, EPUB, FB2, TXT, MOBI* formatlarında indirin veya çevrim içi okuyun.",
+  "select_language": "🌍 Lütfen tercih ettiğiniz dili seçin:",
+  "language_changed": "✅ Dil başarıyla güncellendi: *{lang_name}*",
+  "menu": {
+    "search": "🔍 Kitap Ara",
+    "categories": "📚 Kategoriler",
+    "textbooks": "🎓 Ders Kitapları",
+    "languages": "🌍 Diller",
+    "popular": "🔥 Popüler Kitaplar",
+    "recent": "🆕 Yeni Eklenenler",
+    "favorites": "⭐ Favoriler",
+    "downloads": "📖 İndirilenlerim",
+    "settings": "⚙️ Ayarlar",
+    "about": "ℹ️ Hakkında",
+    "admin": "⚡ Yönetici Paneli"
+  },
+  "search": {
+    "prompt": "🔍 *Kitap Arama*\n\nKitap adı, yazar, ISBN veya konu girin:\n_Örnek: Suç ve Ceza, Dostoyevski, Kuantum Fiziği_",
+    "searching": "🔎 Kütüphaneler taranıyor: *{query}*...",
+    "no_results": "❌ *\"{query}\"* ile eşleşen kitap bulunamadı. Lütfen farklı anahtar kelimeler deneyin.",
+    "results_header": "📚 *\"{query}\" Arama Sonuçları* (Sayfa {page}/{total_pages}):\nBulunan kitap sayısı: {count}",
+    "filter_prompt": "⚙️ *Arama Filtreleri:*",
+    "filter_format": "📑 Format: {format}",
+    "filter_lang": "🌐 Dil: {lang}",
+    "clear_filters": "🔄 Filtreleri Sıfırla",
+    "next": "İleri ➡️",
+    "prev": "⬅️ Geri",
+    "page_info": "Sayfa {page} / {total_pages}"
+  },
+  "book": {
+    "details": "📖 *{title}*\n\n✍️ *Yazar:* {authors}\n📅 *Yıl:* {year}\n🌐 *Dil:* {language}\n🏢 *Yayıncı:* {publisher}\n🔢 *ISBN:* {isbn}\n📑 *Formatlar:* {formats}\n⚖️ *Lisans:* {license}\n🏛️ *Kaynak:* {source}\n\n📝 *Açıklama:*\n{description}",
+    "no_description": "Bu kitap için açıklama bulunmuyor.",
+    "unknown": "Bilinmiyor",
+    "download_btn": "📥 İndir {format} ({size})",
+    "download_btn_no_size": "📥 İndir {format}",
+    "access_btn": "🌐 Çevrim İçi Oku",
+    "add_fav": "⭐ Favorilere Ekle",
+    "remove_fav": "❌ Favorilerden Çıkar",
+    "fav_added": "⭐ *\"{title}\"* favorilerinize eklendi!",
+    "fav_removed": "🗑️ *\"{title}\"* favorilerden kaldırıldı.",
+    "back_to_results": "⬅️ Sonuçlara Dön",
+    "back_to_menu": "🏠 Ana Menü"
+  },
+  "download": {
+    "preparing": "⏳ *\"{title}\"* ({format}) hazırlanıyor...",
+    "downloading": "📥 Dosya Telegram üzerinden aktarılıyor...",
+    "success": "✅ Başarıyla gönderildi! İyi okumalar: *\"{title}\"*.",
+    "too_large": "⚠️ *Dosya Telegram aktarım sınırını aşıyor* ({size}).\nTelegram botları en fazla 50 MB gönderebilir.\n\n🔗 *Resmi Doğrudan Erişim / İndirme Bağlantısı:*\n{link}",
+    "failed": "❌ Dosya Telegram üzerinden iletilemedi. Lütfen resmi bağlantı üzerinden açın:\n{link}"
+  },
+  "categories": {
+    "title": "📚 *Kitap Kategorileri*\nİncelemek istediğiniz konuyu seçin:",
+    "textbooks_title": "🎓 *Açık Ders Kitapları*\nBir çalışma alanı seçin:",
+    "category_books": "📚 *Kategori: {category}* (Sayfa {page}/{total_pages}):"
+  },
+  "favorites": {
+    "empty": "⭐ Favori listeniz henüz boş.\nHerhangi bir kitapta *⭐ Favorilere Ekle* butonuna basarak kaydedebilirsiniz!",
+    "header": "⭐ *Favori Kitaplarınız* (Toplam: {total} - Sayfa {page}/{total_pages}):"
+  },
+  "downloads_history": {
+    "empty": "📖 Henüz bir kitap indirmediniz.",
+    "header": "📖 *İndirme Geçmişiniz* (Toplam: {total} - Sayfa {page}/{total_pages}):"
+  },
+  "settings": {
+    "title": "⚙️ *Kullanıcı Ayarları*\n\n👤 *ID:* `{user_id}`\n🌐 *Dil:* {language}\n📅 *Kayıt Tarihi:* {registered_date}\n⭐ *Favoriler:* {favorites_count}\n📥 *İndirilenler:* {downloads_count}",
+    "change_lang": "🌍 Dili Değiştir",
+    "stats": "📊 İstatistiklerim"
+  },
+  "about": {
+    "text": "📖 *Evrensel Dijital Kütüphane*\n\nKamu malı ve açık lisanslı kitapları tek bir çatı altında sunan modern bir dijital kütüphanedir.\n\n🌐 *Entegre Kaynaklar:*\n• Open Library\n• Project Gutenberg\n• Google Books (Açık Erişim)\n• Internet Archive"
+  },
+  "admin": {
+    "title": "⚡ *Yönetim Paneli*",
+    "stats": "📊 *Sistem Durumu*\n• Toplam Kullanıcı: `{total_users}`\n• Aktif Kullanıcı (7 gün): `{active_users}`\n• İndekslenen Kitaplar: `{total_books}`\n• Toplam İndirme: `{total_downloads}`\n• Veritabanı: `PostgreSQL Bağlı`\n• Redis Önbellek: `{redis_status}`",
+    "broadcast_prompt": "📢 Tüm kullanıcılara gönderilecek duyuru metnini girin:",
+    "broadcast_started": "📢 {total} kullanıcıya duyuru gönderiliyor...",
+    "broadcast_done": "✅ Duyuru tamamlandı!\nİletilen: {sent} | Başarısız: {failed}",
+    "add_book": "➕ Manuel Kitap Ekle",
+    "manage_categories": "🗂️ Kategorileri Yönet",
+    "btn_stats": "📊 İstatistikleri Güncelle",
+    "btn_broadcast": "📢 Toplu Mesaj Gönder"
+  },
+  "errors": {
+    "general": "⚠️ Bir hata oluştu. Lütfen daha sonra tekrar deneyin.",
+    "throttled": "⏳ İstekler çok hızlı gönderildi. Lütfen biraz bekleyin.",
+    "blocked": "⛔ Hesabınız yönetici tarafından engellenmiştir.",
+    "unauthorized": "⛔ Bu işlemi yapmaya yetkiniz bulunmamaktadır."
+  }
+}

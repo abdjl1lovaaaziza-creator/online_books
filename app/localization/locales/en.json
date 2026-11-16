@@ -1,0 +1,96 @@
+{
+  "app_name": "Smart Library",
+  "welcome": "👋 <b>Welcome to Smart Library, {name}!</b> 📚\n\nIntelligent Telegram bot functioning as an online digital library. Search books, textbooks, and educational resources on virtually any topic.\n\n🔍 Search by <b>title, author, or keywords</b>\n🎓 <b>Textbooks</b> and study materials across disciplines\n📂 Browse <b>categories</b> and genres\n⭐ Save to <b>Favorites</b> and access legal reading/purchasing sources",
+  "select_language": "🌍 Please select your preferred language / Tilni tanlang / Выберите язык:",
+  "language_changed": "✅ Language successfully updated to: <b>{lang_name}</b>",
+  "menu": {
+    "search": "📚 Search Books",
+    "textbooks": "🎓 Textbooks",
+    "popular": "🔥 Popular Books",
+    "categories": "📂 Categories",
+    "favorites": "⭐ Favorites",
+    "about": "ℹ️ About Bot",
+    "admin": "⚡ Admin Panel"
+  },
+  "search": {
+    "prompt": "📚 <b>Smart Library — Book Search</b>\n\nSend a query to search:\n• 📖 <b>Book Title</b> (e.g., <i>Clean Code</i>, <i>War and Peace</i>)\n• ✍️ <b>Author Name</b> (e.g., <i>Robert Martin</i>, <i>Leo Tolstoy</i>)\n• 🏷️ <b>Keywords or Topic</b> (e.g., <i>Quantum Physics</i>, <i>Python Development</i>)\n\n<i>Or select a specialized search filter below:</i>",
+    "prompt_title": "📖 <b>Search by Title</b>\n\nSend the book or textbook title (e.g., <i>Clean Code</i>):",
+    "prompt_author": "✍️ <b>Search by Author</b>\n\nSend the author's name (e.g., <i>Robert Martin</i> or <i>Tolstoy</i>):",
+    "prompt_keywords": "🏷️ <b>Search by Topic / Keywords</b>\n\nSend keywords or subject (e.g., <i>Machine Learning</i>):",
+    "prompt_textbook": "🎓 <b>Search Textbooks by Subject</b>\n\nSend the academic discipline (e.g., <i>Higher Mathematics</i>, <i>Biochemistry</i>):",
+    "searching": "🔎 Searching library for: <b>\"{query}\"</b>...",
+    "no_results": "❌ No books found matching <b>\"{query}\"</b>.\nTry different keywords, broader terms, or check spelling.",
+    "results_header": "📚 <b>Search Results for \"{query}\"</b> (Page {page}/{total_pages}):\nShowing {count} books found:",
+    "filter_prompt": "⚙️ <b>Filter Search Results:</b>",
+    "filter_format": "📑 Format: {format}",
+    "filter_lang": "🌐 Language: {lang}",
+    "clear_filters": "🔄 Reset Filters",
+    "next": "Next ➡️",
+    "prev": "⬅️ Previous",
+    "page_info": "Page {page} of {total_pages}"
+  },
+  "textbooks": {
+    "title": "🎓 <b>Textbooks and Educational Literature</b>\n\nChoose an academic discipline or subject to find textbooks:",
+    "custom_prompt": "🎓 <b>Search Textbooks by Subject</b>\n\nSend the subject or academic discipline (e.g., <i>Theoretical Physics</i>, <i>Organic Chemistry</i>):"
+  },
+  "book": {
+    "details": "📖 <b>{title}</b>\n\n✍️ <b>Author(s):</b> {authors}\n📅 <b>Year:</b> {year}\n🌐 <b>Language:</b> {language}\n🏢 <b>Publisher:</b> {publisher}\n🔢 <b>ISBN:</b> {isbn}\n📑 <b>Formats:</b> {formats}\n⚖️ <b>License:</b> {license}\n🏛️ <b>Source:</b> {source}\n\n📝 <b>Description:</b>\n{description}",
+    "no_description": "No description available for this book.",
+    "unknown": "Unknown",
+    "download_btn": "📥 Download {format} ({size})",
+    "download_btn_no_size": "📥 Download {format}",
+    "access_btn": "🌐 Read Online (Legal Source)",
+    "buy_btn": "🛒 Buy / Read Legally",
+    "add_fav": "⭐ Add to Favorites",
+    "remove_fav": "❌ Remove from Favorites",
+    "fav_added": "⭐ <b>\"{title}\"</b> was added to your favorites!",
+    "fav_removed": "🗑️ <b>\"{title}\"</b> removed from favorites.",
+    "back_to_results": "⬅️ Back to Results",
+    "back_to_menu": "🏠 Main Menu"
+  },
+  "download": {
+    "preparing": "⏳ Preparing file delivery for <b>\"{title}\"</b> ({format})...",
+    "downloading": "📥 Transmitting file to Telegram...",
+    "success": "✅ Successfully delivered! Enjoy reading <b>\"{title}\"</b>.",
+    "too_large": "⚠️ <b>File exceeds Telegram upload limit</b> ({size}).\nTelegram limits bot uploads to 50 MB.\n\n🔗 <b>Official Direct Download / Reading Link:</b>\n{link}",
+    "failed": "❌ Could not transmit file via Telegram. Please visit the official source page:\n{link}"
+  },
+  "categories": {
+    "title": "📂 <b>Book Categories & Genres</b>\n\nSelect a category to browse:",
+    "textbooks_title": "🎓 <b>Educational Materials & Disciplines</b>\n\nSelect a subject to search textbooks:",
+    "category_books": "📂 <b>{category}</b> (Page {page}/{total_pages}):"
+  },
+  "favorites": {
+    "empty": "⭐ Your favorites list is empty.\nClick <b>⭐ Add to Favorites</b> on any book page to save it here!",
+    "header": "⭐ <b>Your Favorite Books</b> ({total} items - Page {page}/{total_pages}):"
+  },
+  "downloads_history": {
+    "empty": "📖 You have not downloaded any books yet.",
+    "header": "📖 <b>Download History</b> ({total} items - Page {page}/{total_pages}):"
+  },
+  "settings": {
+    "title": "⚙️ <b>Profile & Settings</b>\n\n👤 <b>User ID:</b> <code>{user_id}</code>\n🌐 <b>Current Language:</b> {language}\n📅 <b>Registration Date:</b> {registered_date}\n⭐ <b>In Favorites:</b> {favorites_count}\n📥 <b>Downloads:</b> {downloads_count}",
+    "change_lang": "🌍 Change Language",
+    "stats": "📊 My Statistics"
+  },
+  "about": {
+    "text": "📚 <b>Smart Library Telegram Bot</b>\n\nAn intelligent online digital library bot designed to search and discover books, university & school textbooks, and educational materials across virtually any topic.\n\n✨ <b>Features:</b>\n• 📚 Search books by title, author, and keywords\n• 🎓 Search textbooks across academic subjects and disciplines\n• 📂 Categorized browsing by genres and topics\n• 🔥 Discover popular, trending, and highly read books\n• ⭐ Save books to Favorites for instant access\n• 📄 Rich metadata: authors, publication year, publisher, ISBN, and summary\n• 🔗 Direct legal sources for online reading and purchasing\n\n🌐 <b>Integrated Sources:</b>\n• <b>Google Books API</b> — global literature database, previews, and official store links\n• <b>Open Library</b> (Internet Archive) — millions of digitized books with open access\n• <b>Project Gutenberg & Internet Archive</b> — public domain classics and direct downloads\n\n⚖️ <b>Copyright Compliance:</b>\nThis bot strictly respects copyright laws. All materials link directly to legal sources, open licenses (Public Domain, Creative Commons), or official publisher/reading pages."
+  },
+  "admin": {
+    "title": "⚡ <b>Administrator Panel</b>",
+    "stats": "📊 <b>System Status</b>\n• Total Users: <code>{total_users}</code>\n• Active (7d): <code>{active_users}</code>\n• Indexed Books: <code>{total_books}</code>\n• Total Downloads: <code>{total_downloads}</code>\n• Database: <code>Connected (PostgreSQL)</code>\n• Redis Cache: <code>{redis_status}</code>",
+    "broadcast_prompt": "📢 <b>Broadcast Message</b>\n\nEnter the message text to be delivered to all registered users:",
+    "broadcast_started": "📢 Broadcasting message to {total} users...",
+    "broadcast_done": "✅ Broadcast completed!\nDelivered: {sent} | Failed: {failed}",
+    "add_book": "➕ Add Book Manually",
+    "manage_categories": "🗂️ Manage Categories",
+    "btn_stats": "📊 Refresh Statistics",
+    "btn_broadcast": "📢 Send Broadcast"
+  },
+  "errors": {
+    "general": "⚠️ An unexpected error occurred. Please try again later.",
+    "throttled": "⏳ You are making requests too quickly. Please wait a moment.",
+    "blocked": "⛔ Your account has been suspended by the administrator.",
+    "unauthorized": "⛔ You do not have permissions to perform this operation."
+  }
+}
