@@ -80,23 +80,70 @@ class BookRepository:
 
         conditions = []
         if query:
-            clean_q = f"%{query.strip().lower()}%"
+            clean_str = query.strip()
+            only_author = False
+            only_title = False
+            if clean_str.startswith("inauthor:"):
+                clean_str = clean_str[len("inauthor:"):].strip()
+                only_author = True
+            elif clean_str.startswith("intitle:"):
+                clean_str = clean_str[len("intitle:"):].strip()
+                only_title = True
+
+            raw_q = f"%{clean_str}%"
+            lower_q = f"%{clean_str.lower()}%"
+            title_q = f"%{clean_str.title()}%"
+            cap_q = f"%{clean_str.capitalize()}%"
+
             author_subq = (
                 select(book_authors.c.book_id)
                 .join(Author, Author.id == book_authors.c.author_id)
-                .where(func.lower(Author.name).like(clean_q))
-            )
-            conditions.append(
-                or_(
-                    func.lower(Book.title).like(clean_q),
-                    func.lower(Book.description).like(clean_q),
-                    Book.isbn.like(clean_q),
-                    Book.id.in_(author_subq)
+                .where(
+                    or_(
+                        Author.name.ilike(raw_q),
+                        func.lower(Author.name).like(lower_q),
+                        Author.name.like(raw_q),
+                        Author.name.like(title_q),
+                        Author.name.like(cap_q)
+                    )
                 )
             )
 
+            if only_author:
+                conditions.append(Book.id.in_(author_subq))
+            elif only_title:
+                conditions.append(
+                    or_(
+                        Book.title.ilike(raw_q),
+                        func.lower(Book.title).like(lower_q),
+                        Book.title.like(raw_q),
+                        Book.title.like(title_q),
+                        Book.title.like(cap_q)
+                    )
+                )
+            else:
+                conditions.append(
+                    or_(
+                        Book.title.ilike(raw_q),
+                        func.lower(Book.title).like(lower_q),
+                        Book.title.like(raw_q),
+                        Book.title.like(title_q),
+                        Book.title.like(cap_q),
+                        Book.description.ilike(raw_q),
+                        func.lower(Book.description).like(lower_q),
+                        Book.isbn.like(lower_q),
+                        Book.id.in_(author_subq)
+                    )
+                )
+
         if language:
-            conditions.append(func.lower(Book.language) == language.lower())
+            lang_prefix = language[:2].lower()
+            conditions.append(
+                or_(
+                    func.lower(Book.language) == language.lower(),
+                    func.lower(Book.language).like(f"{lang_prefix}%")
+                )
+            )
 
         if year:
             conditions.append(Book.publication_year == year)

@@ -53,7 +53,7 @@ async def handle_textbook_subject_click(callback: CallbackQuery, state: FSMConte
     books, total_count = await search_service.search(
         session=session,
         query=f"учебник {search_term}",
-        language=user_lang,
+        language=None,
         is_textbook=True,
         limit=page_size,
         offset=0
@@ -112,7 +112,7 @@ async def handle_category_click(callback: CallbackQuery, session: AsyncSession, 
         books, total_count = await search_service.search(
             session=session,
             query=category.name_ru or category.name_en or cat_name,
-            language=user_lang,
+            language=None,
             is_textbook=category.is_textbook,
             limit=page_size,
             offset=offset

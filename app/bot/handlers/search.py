@@ -116,11 +116,23 @@ async def _execute_search(
         books, total_count = await search_service.search(
             session=session,
             query=search_query,
-            language=user_lang,
+            language=None,
             is_textbook=is_textbook,
             limit=page_size,
             offset=0
         )
+
+        # Smart fallback: if specific query (e.g. inauthor:) yielded 0 results, retry with broad search query!
+        if not books and search_query != query:
+            logger.info(f"Specialized search '{search_query}' yielded 0 results, falling back to broad query '{query}'")
+            books, total_count = await search_service.search(
+                session=session,
+                query=query,
+                language=None,
+                is_textbook=is_textbook,
+                limit=page_size,
+                offset=0
+            )
 
         # Record history
         if user:
@@ -172,7 +184,7 @@ async def handle_pagination(callback: CallbackQuery, session: AsyncSession, user
         books, total_count = await search_service.search(
             session=session,
             query=query,
-            language=user_lang,
+            language=None,
             limit=page_size,
             offset=offset
         )

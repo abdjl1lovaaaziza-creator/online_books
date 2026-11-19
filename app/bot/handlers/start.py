@@ -18,7 +18,9 @@ async def handle_start(message: Message, state: FSMContext, session: AsyncSessio
     is_admin = bool(user and user.is_admin)
 
     # Send welcome text
-    welcome_text = t("welcome", name=message.from_user.first_name)
+    first_name = message.from_user.first_name if message.from_user and message.from_user.first_name else ""
+    user_name = first_name or (message.from_user.username if message.from_user else "") or "друг"
+    welcome_text = t("welcome", name=user_name)
     menu_kb = get_main_menu_keyboard(t, is_admin=is_admin)
 
     await message.answer(

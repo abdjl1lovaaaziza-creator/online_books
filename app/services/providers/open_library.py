@@ -4,6 +4,36 @@ from loguru import logger
 from app.services.providers.base import BaseBookProvider, StandardBook, StandardBookFormat
 
 
+def normalize_language_code(code: Optional[str]) -> str:
+    """Normalize language to standard 2-letter ISO-639-1 code."""
+    if not code:
+        return "ru"
+    clean = code.lower().strip()
+    mapping = {
+        "rus": "ru",
+        "ru": "ru",
+        "russian": "ru",
+        "eng": "en",
+        "en": "en",
+        "english": "en",
+        "uzb": "uz",
+        "uz": "uz",
+        "tur": "tr",
+        "tr": "tr",
+        "ara": "ar",
+        "ar": "ar",
+        "deu": "de",
+        "ger": "de",
+        "de": "de",
+        "fra": "fr",
+        "fre": "fr",
+        "fr": "fr",
+        "spa": "es",
+        "es": "es",
+    }
+    return mapping.get(clean, clean[:2] if len(clean) >= 2 else clean)
+
+
 class OpenLibraryProvider(BaseBookProvider):
     """Open Library API provider (Internet Archive initiative)."""
 
@@ -22,16 +52,34 @@ class OpenLibraryProvider(BaseBookProvider):
         limit: int = 10,
         offset: int = 0
     ) -> List[StandardBook]:
-        """Search books via Open Library Search API."""
+        """Search books via Open Library Search API with support for author and title modifiers."""
         page = (offset // limit) + 1 if limit else 1
-        params = {
-            "q": query,
-            "limit": limit,
-            "page": page,
-            "fields": "key,title,author_name,first_publish_year,publisher,isbn,cover_i,language,ia,public_scan_b,has_fulltext"
-        }
-        if language:
-            params["lang"] = language[:3].lower()
+        clean_q = query.strip()
+        fields_str = "key,title,author_name,first_publish_year,publisher,isbn,cover_i,language,ia,public_scan_b,has_fulltext"
+
+        if clean_q.startswith("inauthor:"):
+            author_val = clean_q[len("inauthor:"):].strip()
+            params = {
+                "author": author_val,
+                "limit": limit,
+                "page": page,
+                "fields": fields_str
+            }
+        elif clean_q.startswith("intitle:"):
+            title_val = clean_q[len("intitle:"):].strip()
+            params = {
+                "title": title_val,
+                "limit": limit,
+                "page": page,
+                "fields": fields_str
+            }
+        else:
+            params = {
+                "q": clean_q,
+                "limit": limit,
+                "page": page,
+                "fields": fields_str
+            }
 
         books: List[StandardBook] = []
         try:
@@ -61,7 +109,8 @@ class OpenLibraryProvider(BaseBookProvider):
                     cover_url = f"{self.COVERS_BASE}/{cover_id}-L.jpg" if cover_id else None
 
                     langs = doc.get("language", [])
-                    lang = langs[0] if langs else (language or "en")
+                    raw_lang = langs[0] if langs else (language or "ru")
+                    lang = normalize_language_code(raw_lang)
 
                     access_url = f"{self.BASE_URL}{key}" if key else None
 
@@ -69,7 +118,6 @@ class OpenLibraryProvider(BaseBookProvider):
                     ia_ids = doc.get("ia", [])
                     if ia_ids and (doc.get("has_fulltext") or doc.get("public_scan_b")):
                         ia_id = ia_ids[0]
-                        # Internet Archive open access direct formats
                         formats.append(
                             StandardBookFormat(
                                 format="pdf",

@@ -1,6 +1,8 @@
 import asyncio
 from typing import List, Optional, Tuple
 from loguru import logger
+from sqlalchemy import select
+from sqlalchemy.orm import selectinload
 from sqlalchemy.ext.asyncio import AsyncSession
 
 from app.database.models.book import Book
@@ -83,6 +85,7 @@ class SearchService:
                 logger.error(f"Provider search failed: {res}")
 
         # Ingest discovered books into local DB
+        saved_book_ids: List[int] = []
         for std_book in discovered_books:
             try:
                 formats_data = [
@@ -94,7 +97,7 @@ class SearchService:
                     }
                     for f in std_book.formats
                 ]
-                await book_repo.save_or_update(
+                saved_b = await book_repo.save_or_update(
                     title=std_book.title,
                     source_name=std_book.source_name,
                     source_id=std_book.source_id,
@@ -111,6 +114,8 @@ class SearchService:
                     authors_names=std_book.authors,
                     formats_data=formats_data
                 )
+                if saved_b and saved_b.id:
+                    saved_book_ids.append(saved_b.id)
             except Exception as e:
                 logger.warning(f"Error persisting discovered book {std_book.title}: {e}")
 
@@ -127,6 +132,25 @@ class SearchService:
             limit=limit,
             offset=offset
         )
+
+        # Fallback to books directly saved from this discovery session if transliteration/case differed
+        if not updated_books and saved_book_ids:
+            fallback_stmt = (
+                select(Book)
+                .options(
+                    selectinload(Book.authors),
+                    selectinload(Book.categories),
+                    selectinload(Book.formats)
+                )
+                .where(Book.id.in_(saved_book_ids))
+                .order_by(Book.id.desc())
+                .offset(offset)
+                .limit(limit)
+            )
+            fallback_res = await session.execute(fallback_stmt)
+            fallback_books = list(fallback_res.scalars().all())
+            if fallback_books:
+                return fallback_books, len(saved_book_ids)
 
         return updated_books, total_count
 

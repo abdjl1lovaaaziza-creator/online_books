@@ -70,11 +70,19 @@ async def menu_popular(message: Message, session: AsyncSession, user_lang, t):
         status_msg = await message.answer("🔎 Загружаем популярные книги из библиотеки...", parse_mode="HTML")
         books, total = await search_service.search(
             session=session,
-            query="классическая литература шедевры",
-            language=user_lang,
+            query="Толстой Достоевский Пушкин",
+            language=None,
             limit=5,
             offset=0
         )
+        if not books:
+            books, total = await search_service.search(
+                session=session,
+                query="классика",
+                language=None,
+                limit=5,
+                offset=0
+            )
         if not books:
             await status_msg.edit_text("📚 В библиотеке пока нет книг. Воспользуйтесь 📚 <b>Найти книгу</b> для поиска!", parse_mode="HTML")
             return
